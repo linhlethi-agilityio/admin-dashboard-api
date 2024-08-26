@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "invoice_products",
+  "info": {
+    "singularName": "invoice-product",
+    "pluralName": "invoice-products",
+    "displayName": "InvoiceProduct"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "idProduct": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "qty": {
+      "type": "integer"
+    }
+  }
+}
