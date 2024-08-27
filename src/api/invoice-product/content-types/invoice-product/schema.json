@@ -15,7 +15,7 @@
     "price": {
       "type": "decimal"
     },
-    "qty": {
+    "quantity": {
       "type": "integer"
     },
     "product": {

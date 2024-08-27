@@ -803,11 +803,11 @@ export interface ApiCustomerCustomer extends Schema.CollectionType {
     firstName: Attribute.String;
     email: Attribute.Email;
     phone: Attribute.String;
-    gender: Attribute.String;
     job: Attribute.String;
     address: Attribute.String;
     avatar: Attribute.String;
     lastName: Attribute.String;
+    gender: Attribute.Boolean;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -878,9 +878,7 @@ export interface ApiInvoiceInvoice extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    name: Attribute.String;
     email: Attribute.Email;
-    date: Attribute.String;
     status: Attribute.String;
     address: Attribute.String;
     avatar: Attribute.String;
@@ -891,6 +889,12 @@ export interface ApiInvoiceInvoice extends Schema.CollectionType {
       'api::invoice-product.invoice-product'
     >;
     invoiceId: Attribute.String;
+    customer: Attribute.Relation<
+      'api::invoice.invoice',
+      'oneToOne',
+      'api::customer.customer'
+    >;
+    date: Attribute.Date;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -922,7 +926,7 @@ export interface ApiInvoiceProductInvoiceProduct extends Schema.CollectionType {
   };
   attributes: {
     price: Attribute.Decimal;
-    qty: Attribute.Integer;
+    quantity: Attribute.Integer;
     product: Attribute.Relation<
       'api::invoice-product.invoice-product',
       'oneToOne',
@@ -961,7 +965,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     name: Attribute.String;
     price: Attribute.Decimal;
     image: Attribute.String;
-    rating: Attribute.Integer;
+    rating: Attribute.Decimal;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

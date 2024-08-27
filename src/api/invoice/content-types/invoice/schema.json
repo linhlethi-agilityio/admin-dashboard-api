@@ -12,14 +12,8 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
-      "type": "string"
-    },
     "email": {
       "type": "email"
-    },
-    "date": {
-      "type": "string"
     },
     "status": {
       "type": "string"
@@ -40,6 +34,14 @@
     },
     "invoiceId": {
       "type": "string"
+    },
+    "customer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::customer.customer"
+    },
+    "date": {
+      "type": "date"
     }
   }
 }

@@ -21,9 +21,6 @@
     "phone": {
       "type": "string"
     },
-    "gender": {
-      "type": "string"
-    },
     "job": {
       "type": "string"
     },
@@ -35,6 +32,9 @@
     },
     "lastName": {
       "type": "string"
+    },
+    "gender": {
+      "type": "boolean"
     }
   }
 }
