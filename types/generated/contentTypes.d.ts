@@ -847,6 +847,7 @@ export interface ApiEventEvent extends Schema.CollectionType {
       'oneToMany',
       'plugin::users-permissions.user'
     >;
+    title: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
