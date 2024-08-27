@@ -37,6 +37,9 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::invoice-product.invoice-product"
+    },
+    "invoiceId": {
+      "type": "string"
     }
   }
 }

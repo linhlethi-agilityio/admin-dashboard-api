@@ -890,6 +890,7 @@ export interface ApiInvoiceInvoice extends Schema.CollectionType {
       'oneToMany',
       'api::invoice-product.invoice-product'
     >;
+    invoiceId: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
