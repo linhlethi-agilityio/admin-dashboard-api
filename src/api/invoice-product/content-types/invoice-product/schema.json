@@ -4,21 +4,24 @@
   "info": {
     "singularName": "invoice-product",
     "pluralName": "invoice-products",
-    "displayName": "InvoiceProduct"
+    "displayName": "InvoiceProduct",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "idProduct": {
-      "type": "string"
-    },
     "price": {
       "type": "decimal"
     },
     "qty": {
       "type": "integer"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
     }
   }
 }

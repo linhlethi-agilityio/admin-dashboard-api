@@ -832,6 +832,7 @@ export interface ApiEventEvent extends Schema.CollectionType {
     singularName: 'event';
     pluralName: 'events';
     displayName: 'Event';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -841,6 +842,11 @@ export interface ApiEventEvent extends Schema.CollectionType {
     status: Attribute.String;
     location: Attribute.String;
     visibility: Attribute.String;
+    users_permissions_users: Attribute.Relation<
+      'api::event.event',
+      'oneToMany',
+      'plugin::users-permissions.user'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -877,7 +883,12 @@ export interface ApiInvoiceInvoice extends Schema.CollectionType {
     status: Attribute.String;
     address: Attribute.String;
     avatar: Attribute.String;
-    starred: Attribute.Boolean;
+    isSelected: Attribute.Boolean;
+    invoice_products: Attribute.Relation<
+      'api::invoice.invoice',
+      'oneToMany',
+      'api::invoice-product.invoice-product'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -902,14 +913,19 @@ export interface ApiInvoiceProductInvoiceProduct extends Schema.CollectionType {
     singularName: 'invoice-product';
     pluralName: 'invoice-products';
     displayName: 'InvoiceProduct';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    idProduct: Attribute.String;
     price: Attribute.Decimal;
     qty: Attribute.Integer;
+    product: Attribute.Relation<
+      'api::invoice-product.invoice-product',
+      'oneToOne',
+      'api::product.product'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -943,7 +959,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     name: Attribute.String;
     price: Attribute.Decimal;
     image: Attribute.String;
-    star: Attribute.Integer;
+    rating: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

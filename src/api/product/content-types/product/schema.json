@@ -21,7 +21,7 @@
     "image": {
       "type": "string"
     },
-    "star": {
+    "rating": {
       "type": "integer"
     }
   }

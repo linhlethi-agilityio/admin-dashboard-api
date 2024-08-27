@@ -30,8 +30,13 @@
     "avatar": {
       "type": "string"
     },
-    "starred": {
+    "isSelected": {
       "type": "boolean"
+    },
+    "invoice_products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::invoice-product.invoice-product"
     }
   }
 }
