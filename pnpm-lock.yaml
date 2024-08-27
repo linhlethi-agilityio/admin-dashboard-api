@@ -29,6 +29,9 @@ dependencies:
   react-router-dom:
     specifier: 5.3.4
     version: 5.3.4(react@18.3.1)
+  strapi-plugin-entity-relationship-chart:
+    specifier: ^4.14.6
+    version: 4.14.6(@babel/runtime@7.25.4)(@codemirror/autocomplete@6.18.0)(@codemirror/language@6.10.2)(@codemirror/lint@6.8.1)(@codemirror/search@6.5.6)(@codemirror/state@6.4.1)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.33.0)(codemirror@6.0.1)(react-dom@18.3.1)(react-router-dom@5.3.4)(react@18.3.1)(styled-components@5.3.3)(typescript@5.2.2)
   styled-components:
     specifier: 5.3.3
     version: 5.3.3(@babel/core@7.25.2)(react-dom@18.3.1)(react-is@18.3.1)(react@18.3.1)
@@ -346,6 +349,17 @@ packages:
       colorspace: 1.1.4
       enabled: 2.0.0
       kuler: 2.0.0
+    dev: false
+
+  /@dagrejs/dagre@1.1.4:
+    resolution: {integrity: sha512-QUTc54Cg/wvmlEUxB+uvoPVKFazM1H18kVHBQNmK2NbrDR5ihOCR6CXLnDSZzMcSQKJtabPUWridBOlJM3WkDg==}
+    dependencies:
+      '@dagrejs/graphlib': 2.2.4
+    dev: false
+
+  /@dagrejs/graphlib@2.2.4:
+    resolution: {integrity: sha512-mepCf/e9+SKYy1d02/UkvSy6+6MoyXhVxP8lLDfA7BPE1X1d4dR0sZznmbM8/XVJ1GPM+Svnx7Xj6ZweByWUkw==}
+    engines: {node: '>17.0.0'}
     dev: false
 
   /@discoveryjs/json-ext@0.5.7:
@@ -10235,6 +10249,42 @@ packages:
   /statuses@2.0.1:
     resolution: {integrity: sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==}
     engines: {node: '>= 0.8'}
+    dev: false
+
+  /strapi-plugin-entity-relationship-chart@4.14.6(@babel/runtime@7.25.4)(@codemirror/autocomplete@6.18.0)(@codemirror/language@6.10.2)(@codemirror/lint@6.8.1)(@codemirror/search@6.5.6)(@codemirror/state@6.4.1)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.33.0)(codemirror@6.0.1)(react-dom@18.3.1)(react-router-dom@5.3.4)(react@18.3.1)(styled-components@5.3.3)(typescript@5.2.2):
+    resolution: {integrity: sha512-l3tYM6DZ5drNVMYljo70C1+FbgAA+dzextRA9f1Ca+9y8oztyO5OTSCp0kGRMt+BuRTx8h4o+ksUiyK6HgK+8Q==}
+    engines: {node: '>=16 <=20', npm: '>=6.0.0'}
+    peerDependencies:
+      react: ^17.0.0 || ^18.0.0
+      react-dom: ^17.0.0 || ^18.0.0
+      react-router-dom: ^5.3.4
+    dependencies:
+      '@dagrejs/dagre': 1.1.4
+      '@strapi/design-system': 1.19.0(@babel/runtime@7.25.4)(@codemirror/autocomplete@6.18.0)(@codemirror/language@6.10.2)(@codemirror/lint@6.8.1)(@codemirror/search@6.5.6)(@codemirror/state@6.4.1)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.33.0)(@strapi/icons@1.19.0)(codemirror@6.0.1)(react-dom@18.3.1)(react-router-dom@5.3.4)(react@18.3.1)(styled-components@5.3.3)
+      '@strapi/helper-plugin': 4.25.8(@strapi/design-system@1.19.0)(@strapi/icons@1.19.0)(react-dom@18.3.1)(react-router-dom@5.3.4)(react@18.3.1)(styled-components@5.3.3)(typescript@5.2.2)
+      '@strapi/icons': 1.19.0(react-dom@18.3.1)(react@18.3.1)
+      lodash: 4.17.21
+      prop-types: 15.8.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      react-router-dom: 5.3.4(react@18.3.1)
+    transitivePeerDependencies:
+      - '@babel/runtime'
+      - '@codemirror/autocomplete'
+      - '@codemirror/language'
+      - '@codemirror/lint'
+      - '@codemirror/search'
+      - '@codemirror/state'
+      - '@codemirror/theme-one-dark'
+      - '@codemirror/view'
+      - '@types/react'
+      - '@types/react-dom'
+      - codemirror
+      - debug
+      - react-native
+      - styled-components
+      - supports-color
+      - typescript
     dev: false
 
   /stream-chain@2.2.5:
