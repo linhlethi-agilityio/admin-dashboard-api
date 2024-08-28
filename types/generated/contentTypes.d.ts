@@ -848,6 +848,9 @@ export interface ApiEventEvent extends Schema.CollectionType {
       'plugin::users-permissions.user'
     >;
     title: Attribute.String;
+    eventType: Attribute.String;
+    repeatSetting: Attribute.String;
+    notificationTime: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
