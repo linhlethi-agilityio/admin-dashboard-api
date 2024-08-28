@@ -34,7 +34,7 @@
       "type": "string"
     },
     "gender": {
-      "type": "boolean"
+      "type": "string"
     }
   }
 }

@@ -807,7 +807,7 @@ export interface ApiCustomerCustomer extends Schema.CollectionType {
     address: Attribute.String;
     avatar: Attribute.String;
     lastName: Attribute.String;
-    gender: Attribute.Boolean;
+    gender: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -838,7 +838,7 @@ export interface ApiEventEvent extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    time: Attribute.String;
+    endTime: Attribute.String;
     status: Attribute.String;
     location: Attribute.String;
     visibility: Attribute.String;
@@ -850,7 +850,7 @@ export interface ApiEventEvent extends Schema.CollectionType {
     title: Attribute.String;
     eventType: Attribute.String;
     repeatSetting: Attribute.String;
-    notificationTime: Attribute.String;
+    notificationTime: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
