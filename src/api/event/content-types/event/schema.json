@@ -31,6 +31,15 @@
     },
     "title": {
       "type": "string"
+    },
+    "eventType": {
+      "type": "string"
+    },
+    "repeatSetting": {
+      "type": "string"
+    },
+    "notificationTime": {
+      "type": "string"
     }
   }
 }
