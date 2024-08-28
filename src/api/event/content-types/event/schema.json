@@ -40,6 +40,9 @@
     },
     "notificationTime": {
       "type": "integer"
+    },
+    "startTime": {
+      "type": "string"
     }
   }
 }

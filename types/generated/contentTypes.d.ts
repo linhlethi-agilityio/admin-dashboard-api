@@ -851,6 +851,7 @@ export interface ApiEventEvent extends Schema.CollectionType {
     eventType: Attribute.String;
     repeatSetting: Attribute.String;
     notificationTime: Attribute.Integer;
+    startTime: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
