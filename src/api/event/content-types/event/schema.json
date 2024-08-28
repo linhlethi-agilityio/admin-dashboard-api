@@ -12,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "time": {
+    "endTime": {
       "type": "string"
     },
     "status": {
@@ -39,7 +39,7 @@
       "type": "string"
     },
     "notificationTime": {
-      "type": "string"
+      "type": "integer"
     }
   }
 }
