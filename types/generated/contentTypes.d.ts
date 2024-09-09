@@ -966,9 +966,9 @@ export interface ApiProductProduct extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    name: Attribute.String;
+    title: Attribute.String;
     price: Attribute.Decimal;
-    image: Attribute.String;
+    imageUrl: Attribute.String;
     rating: Attribute.Decimal;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
