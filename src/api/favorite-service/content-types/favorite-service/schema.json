@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "favorite_services",
+  "info": {
+    "singularName": "favorite-service",
+    "pluralName": "favorite-services",
+    "displayName": "FavoriteServices"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}
