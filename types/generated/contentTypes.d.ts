@@ -870,37 +870,6 @@ export interface ApiEventEvent extends Schema.CollectionType {
   };
 }
 
-export interface ApiFavoriteServiceFavoriteService
-  extends Schema.CollectionType {
-  collectionName: 'favorite_services';
-  info: {
-    singularName: 'favorite-service';
-    pluralName: 'favorite-services';
-    displayName: 'FavoriteServices';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::favorite-service.favorite-service',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::favorite-service.favorite-service',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiInvoiceInvoice extends Schema.CollectionType {
   collectionName: 'invoices';
   info: {
@@ -985,28 +954,6 @@ export interface ApiInvoiceProductInvoiceProduct extends Schema.CollectionType {
   };
 }
 
-export interface ApiLeadLead extends Schema.CollectionType {
-  collectionName: 'leads';
-  info: {
-    singularName: 'lead';
-    pluralName: 'leads';
-    displayName: 'Lead';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::lead.lead', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::lead.lead', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
 export interface ApiProductProduct extends Schema.CollectionType {
   collectionName: 'product';
   info: {
@@ -1041,54 +988,35 @@ export interface ApiProductProduct extends Schema.CollectionType {
   };
 }
 
-export interface ApiReferralReferral extends Schema.CollectionType {
-  collectionName: 'referrals';
+export interface ApiStatisticStatistic extends Schema.CollectionType {
+  collectionName: 'statistics';
   info: {
-    singularName: 'referral';
-    pluralName: 'referrals';
-    displayName: 'Referrals';
+    singularName: 'statistic';
+    pluralName: 'statistics';
+    displayName: 'Statistics';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.String;
+    favoriteServices: Attribute.Integer;
+    newSales: Attribute.Integer;
+    newLeads: Attribute.Integer;
+    referrals: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::referral.referral',
+      'api::statistic.statistic',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::referral.referral',
+      'api::statistic.statistic',
       'oneToOne',
       'admin::user'
     > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiSaleSale extends Schema.CollectionType {
-  collectionName: 'sales';
-  info: {
-    singularName: 'sale';
-    pluralName: 'sales';
-    displayName: 'Sales';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::sale.sale', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::sale.sale', 'oneToOne', 'admin::user'> &
       Attribute.Private;
   };
 }
@@ -1113,13 +1041,10 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::customer.customer': ApiCustomerCustomer;
       'api::event.event': ApiEventEvent;
-      'api::favorite-service.favorite-service': ApiFavoriteServiceFavoriteService;
       'api::invoice.invoice': ApiInvoiceInvoice;
       'api::invoice-product.invoice-product': ApiInvoiceProductInvoiceProduct;
-      'api::lead.lead': ApiLeadLead;
       'api::product.product': ApiProductProduct;
-      'api::referral.referral': ApiReferralReferral;
-      'api::sale.sale': ApiSaleSale;
+      'api::statistic.statistic': ApiStatisticStatistic;
     }
   }
 }

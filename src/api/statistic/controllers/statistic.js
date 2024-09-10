@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * sale controller
+ * statistic controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::sale.sale');
+module.exports = createCoreController('api::statistic.statistic');

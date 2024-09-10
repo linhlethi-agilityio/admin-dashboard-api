@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "statistics",
+  "info": {
+    "singularName": "statistic",
+    "pluralName": "statistics",
+    "displayName": "Statistics"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "favoriteServices": {
+      "type": "integer"
+    },
+    "newSales": {
+      "type": "integer"
+    },
+    "newLeads": {
+      "type": "integer"
+    },
+    "referrals": {
+      "type": "integer"
+    }
+  }
+}
