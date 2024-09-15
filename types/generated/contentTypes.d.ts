@@ -885,7 +885,7 @@ export interface ApiInvoiceInvoice extends Schema.CollectionType {
     email: Attribute.Email;
     status: Attribute.String;
     address: Attribute.String;
-    avatar: Attribute.String;
+    imagerUrl: Attribute.String;
     isSelected: Attribute.Boolean;
     invoice_products: Attribute.Relation<
       'api::invoice.invoice',
