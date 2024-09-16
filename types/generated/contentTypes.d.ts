@@ -808,6 +808,7 @@ export interface ApiCustomerCustomer extends Schema.CollectionType {
     avatar: Attribute.String;
     lastName: Attribute.String;
     gender: Attribute.String;
+    fullName: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
