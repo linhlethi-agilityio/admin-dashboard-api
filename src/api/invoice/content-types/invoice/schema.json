@@ -21,7 +21,7 @@
     "address": {
       "type": "string"
     },
-    "imagerUrl": {
+    "imageUrl": {
       "type": "string"
     },
     "isSelected": {
