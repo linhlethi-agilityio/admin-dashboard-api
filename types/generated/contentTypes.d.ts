@@ -971,6 +971,9 @@ export interface ApiProductProduct extends Schema.CollectionType {
     price: Attribute.Decimal;
     imageUrl: Attribute.String;
     rating: Attribute.Decimal;
+    brand: Attribute.String;
+    negotiable: Attribute.Boolean;
+    description: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1022,6 +1025,38 @@ export interface ApiStatisticStatistic extends Schema.CollectionType {
   };
 }
 
+export interface ApiTaskTask extends Schema.CollectionType {
+  collectionName: 'tasks';
+  info: {
+    singularName: 'task';
+    pluralName: 'tasks';
+    displayName: 'Task';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    label: Attribute.String;
+    level: Attribute.String;
+    description: Attribute.Text;
+    assignees: Attribute.Relation<
+      'api::task.task',
+      'oneToMany',
+      'plugin::users-permissions.user'
+    >;
+    images: Attribute.JSON;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::task.task', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::task.task', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1046,6 +1081,7 @@ declare module '@strapi/types' {
       'api::invoice-product.invoice-product': ApiInvoiceProductInvoiceProduct;
       'api::product.product': ApiProductProduct;
       'api::statistic.statistic': ApiStatisticStatistic;
+      'api::task.task': ApiTaskTask;
     }
   }
 }

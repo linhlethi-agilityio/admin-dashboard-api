@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "product",
+  "collectionName": "tasks",
   "info": {
-    "singularName": "product",
-    "pluralName": "products",
-    "displayName": "Product",
+    "singularName": "task",
+    "pluralName": "tasks",
+    "displayName": "Task",
     "description": ""
   },
   "options": {
@@ -15,23 +15,22 @@
     "title": {
       "type": "string"
     },
-    "price": {
-      "type": "decimal"
-    },
-    "imageUrl": {
+    "label": {
       "type": "string"
     },
-    "rating": {
-      "type": "decimal"
-    },
-    "brand": {
+    "level": {
       "type": "string"
-    },
-    "negotiable": {
-      "type": "boolean"
     },
     "description": {
       "type": "text"
+    },
+    "assignees": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user"
+    },
+    "images": {
+      "type": "json"
     }
   }
 }
