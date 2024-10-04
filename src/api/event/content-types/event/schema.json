@@ -43,6 +43,9 @@
     },
     "startTime": {
       "type": "string"
+    },
+    "date": {
+      "type": "text"
     }
   }
 }
