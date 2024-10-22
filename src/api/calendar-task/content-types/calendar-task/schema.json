@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "calendar_tasks",
+  "info": {
+    "singularName": "calendar-task",
+    "pluralName": "calendar-tasks",
+    "displayName": "CalendarTask"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "descriptions": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string"
+    }
+  }
+}

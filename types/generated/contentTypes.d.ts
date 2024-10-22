@@ -789,6 +789,39 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiCalendarTaskCalendarTask extends Schema.CollectionType {
+  collectionName: 'calendar_tasks';
+  info: {
+    singularName: 'calendar-task';
+    pluralName: 'calendar-tasks';
+    displayName: 'CalendarTask';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.Text;
+    descriptions: Attribute.String;
+    date: Attribute.String;
+    time: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::calendar-task.calendar-task',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::calendar-task.calendar-task',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCustomerCustomer extends Schema.CollectionType {
   collectionName: 'customer';
   info: {
@@ -1077,6 +1110,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::calendar-task.calendar-task': ApiCalendarTaskCalendarTask;
       'api::customer.customer': ApiCustomerCustomer;
       'api::event.event': ApiEventEvent;
       'api::invoice.invoice': ApiInvoiceInvoice;
